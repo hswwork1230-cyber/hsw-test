@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maokiddo x 台北市寵物商業同業公會 | 專業寵物保母認證課程</title>
+    <title>Maokiddo 寵物保母專業進修課程 | 臺北市動保處核定</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,10 +15,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            orange: '#F59E0B', // Maokiddo 溫暖橘
-                            blue: '#1E40AF',   // 公會專業藍
+                            orange: '#F59E0B', // Maokiddo 活力橘
+                            blue: '#1E40AF',   // 專業深藍
                             dark: '#1F2937',
-                            light: '#FFFBEB'
+                            light: '#FFFBEB',
+                            green: '#10B981'   // 認證/通過綠
                         }
                     },
                     fontFamily: {
@@ -30,12 +31,24 @@
     </script>
     <style>
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
         .scroll-smooth {
             scroll-behavior: smooth;
+        }
+        .check-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .check-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: bold;
         }
     </style>
     <!-- Google Tag Manager -->
@@ -53,423 +66,320 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <!-- Top Bar -->
     <div class="bg-brand-blue text-white text-center py-2 px-4 text-sm md:text-base font-bold sticky top-0 z-50 shadow-md">
-        <i class="fas fa-bullhorn mr-2"></i> 
-        全台唯一官方認證合作！本課程與「台北市寵物商業同業公會」共同舉辦，結業即具備合法從業資格。
+        <i class="fas fa-check-circle mr-2 text-brand-orange"></i> 
+        品質有保障！本課程為「臺北市動物保護處」核定認可課程，結業可取得特定寵物業專任人員時數認證。
     </div>
 
-    <!-- Navigation (Simple) -->
-    <nav class="bg-white shadow-sm py-4">
+    <!-- Navigation / Breadcrumbs -->
+    <nav class="bg-white shadow-sm py-3 border-b border-gray-100">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
+            <div class="flex flex-col">
                 <span class="text-2xl font-black text-brand-orange tracking-tighter">maokiddo</span>
-                <span class="text-xs text-gray-500 border-l pl-2 border-gray-300">專業寵物保母平台</span>
+                <span class="text-xs text-gray-400 mt-1">
+                    首頁 > 保母進修 > <span class="text-brand-blue font-bold">課程介紹</span>
+                </span>
             </div>
-            <a href="#register" class="bg-brand-orange hover:bg-amber-600 text-white px-4 py-2 rounded-full font-bold text-sm transition duration-300">
-                立即諮詢
+            <a href="#register" class="hidden md:inline-block bg-brand-orange hover:bg-amber-600 text-white px-5 py-2 rounded-full font-bold text-sm transition duration-300 shadow">
+                立即報名
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-bg h-[650px] flex items-center justify-center text-white relative">
+    <header class="hero-bg h-auto min-h-[600px] flex items-center justify-center text-white py-16">
         <div class="container mx-auto px-4 text-center">
-            <div class="inline-block bg-brand-orange/90 text-white px-4 py-1 rounded-full text-sm font-bold mb-4 tracking-wide">
-                台北市寵物商業同業公會 x maokiddo 強強聯手
+            <div class="inline-block bg-white text-brand-blue px-4 py-1 rounded-full text-sm font-bold mb-6 tracking-wide shadow-lg border border-brand-blue">
+                10 堂核心必修 ‧ 40 小時特寵認證時數
             </div>
-            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight drop-shadow-lg">
-                讓對毛孩的愛，<br>成為合法的專業職涯
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight drop-shadow-lg">
+                【 犬貓行為 × 照護 × 法規一次到位 】<br>
+                <span class="text-brand-orange">打造值得信賴的專業寵物保母</span>
             </h1>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto font-light drop-shadow-md">
-                拒絕地下黑戶！取得公會認可證書，成為飼主最信任的專業寵物保母。<br>
-                每一份託付都值得被慎重對待，現在就開創安心的第二事業。
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto font-light drop-shadow-md leading-relaxed">
+                你是否覺得照顧毛孩時，總有一些無法掌控的突發狀況？<br>
+                Maokiddo 邀請你一起，透過系統化的專業進修，補齊第一線最需要的知識與判斷力。<br>
+                這不只是一堂課，更是你通往「專業職人」的必經之路。
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#levels" class="px-8 py-3 border-2 border-white text-white font-bold rounded hover:bg-white hover:text-brand-blue transition duration-300">
-                    了解課程分級
+                <a href="#curriculum" class="px-8 py-3 border-2 border-white text-white font-bold rounded hover:bg-white hover:text-brand-blue transition duration-300">
+                    查看課程大綱
                 </a>
-                <a href="#register" class="px-8 py-3 bg-brand-orange text-white font-bold rounded shadow-lg hover:bg-amber-600 transition duration-300 transform hover:-translate-y-1">
-                    立即報名 (公會合作場次)
+                <a href="#register" class="px-8 py-3 bg-brand-orange text-white font-bold rounded shadow-lg hover:bg-amber-600 transition duration-300 transform hover:-translate-y-1 flex items-center justify-center">
+                    立即報名 <span class="ml-2 text-sm bg-black/20 px-2 py-0.5 rounded">NT$ 8,800</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Core Values -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-brand-dark mb-4">為什麼選擇公會合作課程？</h2>
-                <p class="text-gray-500">告別提心吊膽的私接時代，讓專業有據可依</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Value 1 -->
-                <div class="p-8 border border-gray-100 rounded-xl shadow-lg hover:shadow-xl transition text-center group">
-                    <div class="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-orange transition">
-                        <i class="fas fa-trophy text-2xl text-brand-orange group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">權威認證</h3>
-                    <p class="text-gray-600">台北市寵物公會全程指導，證書含金量業界最高，是您專業能力的最佳背書。</p>
-                </div>
-                <!-- Value 2 -->
-                <div class="p-8 border border-gray-100 rounded-xl shadow-lg hover:shadow-xl transition text-center group">
-                    <div class="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-orange transition">
-                        <i class="fas fa-scale-balanced text-2xl text-brand-orange group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">合法合規</h3>
-                    <p class="text-gray-600">課程內容完全符合動保法規，教你如何合法登記、簽訂合約，避免觸法風險。</p>
-                </div>
-                <!-- Value 3 -->
-                <div class="p-8 border border-gray-100 rounded-xl shadow-lg hover:shadow-xl transition text-center group">
-                    <div class="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-orange transition">
-                        <i class="fas fa-shield-halved text-2xl text-brand-orange group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">安全保障</h3>
-                    <p class="text-gray-600">建立正確保險觀念與責任歸屬，不僅保障保母自身，也保障飼主雙方權益。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Definition Section (Image Left, Text Right) -->
+    <!-- Pain Points Section -->
     <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
-                <img src="https://images.unsplash.com/photo-1551730459-92db2a308d6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional Pet Sitting" class="rounded-lg shadow-2xl">
-            </div>
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-bold text-brand-dark mb-6">什麼是「專業寵物保母」？</h2>
-                <h3 class="text-xl text-brand-orange font-semibold mb-4">不只是餵食遛狗，更是一種基於「信任」與「法規」的專業託付</h3>
-                <p class="text-gray-600 mb-4 leading-relaxed">
-                    現代寵物保母是一種融合「動物行為理解」、「法規知識」與「精緻生活照護」的新興職業。
-                </p>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    不同於傳統兼職，我們強調在合法的框架下，從讀懂毛孩的眼神開始，幫助忙碌的飼主解決照顧焦慮。
-                    <br><br>
-                    <strong>最大的不同在於：我們合法、合規，且專業。</strong>
-                </p>
-                <div class="bg-white p-4 border-l-4 border-brand-blue rounded shadow-sm">
-                    <p class="italic text-gray-700">當你擁有公會背書的專業，飼主能放心託付，你的愛心也能變現為穩定的收入。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Curriculum Section -->
-    <section id="levels" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <span class="text-brand-orange font-bold tracking-wider uppercase">Training Program</span>
-                <h2 class="text-3xl font-bold text-brand-dark mt-2">寵物保母課程培訓項目</h2>
-                <p class="text-gray-500 mt-2">從入門到考證，系統化培訓，讓每一步都走在合法的道路上</p>
+                <h2 class="text-3xl font-bold text-brand-dark mb-4">你在照顧現場，是否也遇過這些難題？</h2>
+                <p class="text-gray-500">面對毛孩與家長，別讓「經驗」成為你唯一的依靠</p>
             </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Item 1 -->
-                <div class="bg-white p-6 rounded-lg shadow border-t-4 border-brand-blue hover:shadow-lg transition">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-scroll text-2xl text-brand-blue mr-3"></i>
-                        <h3 class="font-bold text-lg">法規與倫理 (公會重點)</h3>
+            <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <!-- Point 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-500 hover:shadow-md transition flex items-start">
+                    <div class="text-red-500 text-2xl mr-4 mt-1"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">行為問題無解</h3>
+                        <p class="text-gray-600 text-sm">狗狗出現吠叫、焦慮、攻擊或分離焦慮，卻不知道如何安全處理？</p>
                     </div>
-                    <ul class="text-gray-600 text-sm list-disc list-inside space-y-1">
-                        <li>特寵法規解析</li>
-                        <li>動保法實務應用</li>
-                        <li>消費糾紛預防</li>
-                        <li>定型化契約簽訂</li>
-                    </ul>
                 </div>
-
-                <!-- Item 2 -->
-                <div class="bg-white p-6 rounded-lg shadow border-t-4 border-red-500 hover:shadow-lg transition">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-briefcase-medical text-2xl text-red-500 mr-3"></i>
-                        <h3 class="font-bold text-lg">緊急應變與醫療</h3>
+                <!-- Point 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-500 hover:shadow-md transition flex items-start">
+                    <div class="text-red-500 text-2xl mr-4 mt-1"><i class="fas fa-notes-medical"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">照護壓力山大</h3>
+                        <p class="text-gray-600 text-sm">貓咪抗拒觸碰、就診困難，每次照顧都像打仗？</p>
                     </div>
-                    <ul class="text-gray-600 text-sm list-disc list-inside space-y-1">
-                        <li>寵物急救術（CPR）</li>
-                        <li>常見疾病徵兆判斷</li>
-                        <li>意外處理流程 S.O.P.</li>
-                    </ul>
                 </div>
-
-                <!-- Item 3 -->
-                <div class="bg-white p-6 rounded-lg shadow border-t-4 border-yellow-500 hover:shadow-lg transition">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-dog text-2xl text-yellow-500 mr-3"></i>
-                        <h3 class="font-bold text-lg">行為語言與互動</h3>
+                <!-- Point 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-500 hover:shadow-md transition flex items-start">
+                    <div class="text-red-500 text-2xl mr-4 mt-1"><i class="fas fa-question-circle"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">專業知識不足</h3>
+                        <p class="text-gray-600 text-sm">面對家長詢問營養、防疫、法規問題，只能憑感覺回答，心虛沒底氣？</p>
                     </div>
-                    <ul class="text-gray-600 text-sm list-disc list-inside space-y-1">
-                        <li>貓狗安定訊號判讀</li>
-                        <li>行為糾正與引導</li>
-                        <li>壓力緩解技巧</li>
-                    </ul>
                 </div>
-
-                <!-- Item 4 -->
-                <div class="bg-white p-6 rounded-lg shadow border-t-4 border-green-500 hover:shadow-lg transition">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-bone text-2xl text-green-500 mr-3"></i>
-                        <h3 class="font-bold text-lg">照護技能與營養</h3>
-                    </div>
-                    <ul class="text-gray-600 text-sm list-disc list-inside space-y-1">
-                        <li>餵食與營養學基礎</li>
-                        <li>日常護理操作</li>
-                        <li>特殊照護（幼/老/病）</li>
-                    </ul>
-                </div>
-
-                <!-- Item 5 -->
-                <div class="bg-white p-6 rounded-lg shadow border-t-4 border-purple-500 hover:shadow-lg transition md:col-span-2 lg:col-span-2">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-key text-2xl text-purple-500 mr-3"></i>
-                        <h3 class="font-bold text-lg">實務操作 S.O.P.</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-2">掌握接案細節，展現專業度：</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">到府服務標準流程</span>
-                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">鑰匙管理</span>
-                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">回報技巧</span>
-                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">客訴處理</span>
+                <!-- Point 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-500 hover:shadow-md transition flex items-start">
+                    <div class="text-red-500 text-2xl mr-4 mt-1"><i class="fas fa-gavel"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">法律紅線擔憂</h3>
+                        <p class="text-gray-600 text-sm">擔心自己在照護、訓練或緊急應對上，不小心踩到動保法規紅線？</p>
                     </div>
                 </div>
             </div>
-
-            <div class="mt-12 text-center bg-brand-light p-8 rounded-xl">
-                <h3 class="text-2xl font-bold mb-4">對成為寵物保母有興趣嗎？</h3>
-                <p class="mb-6">不論你想整理自己的養寵觀念、開啟副業、或成為全職專業保母，<br>我們都有適合你的課程階段，並協助你對接公會資源。</p>
-                <a href="#register" class="inline-block bg-brand-blue text-white px-8 py-3 rounded hover:bg-blue-800 transition shadow-md">
-                    立即諮詢課程細節
-                </a>
+            
+            <div class="mt-10 text-center">
+                <div class="inline-block bg-brand-blue text-white px-6 py-3 rounded-lg shadow-lg">
+                    <p class="font-bold text-lg">如果以上有一個「是」，這套課程就是為你量身打造！</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Target Audience & Highlights -->
-    <section class="py-16 bg-gray-900 text-white">
+    <!-- Course Introduction & Structure -->
+    <section id="curriculum" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Left: Who is suitable -->
-                <div>
-                    <h2 class="text-3xl font-bold mb-6 text-brand-orange">誰適合參加？</h2>
-                    <p class="mb-6 text-gray-300">不需要獸醫背景，擁有這些特質，你就非常適合！歡迎各行各業加入，發揮跨界新價值。</p>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-brand-orange mt-1 mr-3"></i>
-                            <div>
-                                <h4 class="font-bold">對動物有愛心與耐心</h4>
-                                <p class="text-sm text-gray-400">責任感強 (視毛孩如己出)</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-brand-orange mt-1 mr-3"></i>
-                            <div>
-                                <h4 class="font-bold">重視法規與合約精神</h4>
-                                <p class="text-sm text-gray-400">想走正規途徑，拒絕地下黑箱</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-brand-orange mt-1 mr-3"></i>
-                            <div>
-                                <h4 class="font-bold">細心的觀察能力</h4>
-                                <p class="text-sm text-gray-400">能發現毛孩細微變化與潛在風險</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8 pt-8 border-t border-gray-700">
-                        <p class="font-bold mb-3 text-sm text-gray-400">歡迎以下背景夥伴：</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-700 px-3 py-1 rounded text-sm">獸醫助理</span>
-                            <span class="bg-gray-700 px-3 py-1 rounded text-sm">美容助理</span>
-                            <span class="bg-gray-700 px-3 py-1 rounded text-sm">志工</span>
-                            <span class="bg-gray-700 px-3 py-1 rounded text-sm">斜槓青年</span>
-                            <span class="bg-gray-700 px-3 py-1 rounded text-sm">退休人士</span>
-                            <span class="bg-gray-700 px-3 py-1 rounded text-sm">家庭主婦</span>
-                        </div>
-                    </div>
+            <div class="flex flex-col md:flex-row items-start gap-12">
+                <!-- Left: Intro -->
+                <div class="md:w-1/3 sticky top-24">
+                    <h2 class="text-3xl font-bold text-brand-dark mb-4">Maokiddo 寵物保母專業進修課程</h2>
+                    <h3 class="text-xl text-brand-orange font-bold mb-4">系統化培訓，讓你的專業有憑有據</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        為了協助 Maokiddo 寵物保母平台的夥伴建立更完整、實用且符合法規的專業能力，我們聯合 <strong>玩物壯志</strong> 與 <strong>大良造興業</strong>，特別規劃這套「10 堂組合課程」。
+                    </p>
+                    <a href="#register" class="text-brand-blue font-bold hover:underline">
+                        前往報名資訊 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
                 </div>
 
-                <!-- Right: Highlights -->
-                <div>
-                    <h2 class="text-3xl font-bold mb-6">參加保母課程，您將得到...</h2>
-                    <div class="space-y-4">
-                        <!-- Highlight 1 -->
-                        <div class="bg-gray-800 p-4 rounded-lg flex items-start">
-                            <div class="bg-brand-orange/20 p-2 rounded mr-4 text-brand-orange">
-                                <i class="fas fa-certificate text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">取得公會認可結業證書</h4>
-                                <p class="text-sm text-gray-400">Maokiddo 與 台北市寵物商業同業公會 雙重認可，合法接案通行證。</p>
-                            </div>
+                <!-- Right: 4 Core Pillars -->
+                <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:border-brand-orange transition group">
+                        <div class="w-12 h-12 bg-orange-100 text-brand-orange rounded-full flex items-center justify-center mb-4 text-xl group-hover:scale-110 transition">
+                            <i class="fas fa-paw"></i>
                         </div>
-                        <!-- Highlight 2 -->
-                        <div class="bg-gray-800 p-4 rounded-lg flex items-start">
-                            <div class="bg-blue-500/20 p-2 rounded mr-4 text-blue-400">
-                                <i class="fas fa-user-tie text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">優先輔導就業</h4>
-                                <p class="text-sm text-gray-400">推薦至公會會員單位實習，或成為我們平台的簽約保母。</p>
-                            </div>
+                        <h4 class="font-bold text-lg mb-2">行為理解</h4>
+                        <p class="text-gray-600 text-sm">犬貓行為解讀、安定訊號、行為訓練基礎。讀懂毛孩的情緒，是建立信任的第一步。</p>
+                    </div>
+                     <!-- Card 2 -->
+                     <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:border-brand-blue transition group">
+                        <div class="w-12 h-12 bg-blue-100 text-brand-blue rounded-full flex items-center justify-center mb-4 text-xl group-hover:scale-110 transition">
+                            <i class="fas fa-clinic-medical"></i>
                         </div>
-                        <!-- Highlight 3 -->
-                        <div class="bg-gray-800 p-4 rounded-lg flex items-start">
-                            <div class="bg-purple-500/20 p-2 rounded mr-4 text-purple-400">
-                                <i class="fas fa-users text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">加入保母互助社群</h4>
-                                <p class="text-sm text-gray-400">享有公會第一手產業資訊、進修講座（如：老犬照護）。</p>
-                            </div>
+                        <h4 class="font-bold text-lg mb-2">專業照護</h4>
+                        <p class="text-gray-600 text-sm">零壓力就診實務、中獸醫養生觀念。學會如何減輕毛孩的就醫與生活壓力。</p>
+                    </div>
+                     <!-- Card 3 -->
+                     <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:border-green-500 transition group">
+                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4 text-xl group-hover:scale-110 transition">
+                            <i class="fas fa-shield-virus"></i>
                         </div>
-                        <!-- Highlight 4 -->
-                        <div class="bg-gray-800 p-4 rounded-lg flex items-start">
-                            <div class="bg-green-500/20 p-2 rounded mr-4 text-green-400">
-                                <i class="fas fa-file-contract text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">專業責任保險諮詢</h4>
-                                <p class="text-sm text-gray-400">降低執業風險，讓每一次服務都無後顧之憂。</p>
-                            </div>
+                        <h4 class="font-bold text-lg mb-2">健康管理</h4>
+                        <p class="text-gray-600 text-sm">防疫知識、營養學基礎。從飲食到疾病預防，建立科學化的健康觀念。</p>
+                    </div>
+                     <!-- Card 4 -->
+                     <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:border-gray-500 transition group">
+                        <div class="w-12 h-12 bg-gray-200 text-gray-700 rounded-full flex items-center justify-center mb-4 text-xl group-hover:scale-110 transition">
+                            <i class="fas fa-balance-scale"></i>
                         </div>
+                        <h4 class="font-bold text-lg mb-2">法規倫理</h4>
+                        <p class="text-gray-600 text-sm">動物福利、特寵法規、避免法律糾紛。懂得保護毛孩，也懂得保護自己。</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Why Choose This Course (USPs) -->
     <section class="py-16 bg-brand-light">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-brand-dark mb-12">結業學員心得分享</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-brand-dark">為什麼這堂課是你的首選？</h2>
+                <p class="text-brand-orange font-bold mt-2">官方核定 x 區塊鏈認證 x 線上高效學習</p>
+            </div>
+            
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Review 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-md relative">
-                    <div class="text-4xl text-brand-orange/20 absolute top-4 right-4"><i class="fas fa-quote-right"></i></div>
-                    <p class="text-gray-600 mb-6 relative z-10">「以前都很擔心私下接案會被檢舉，上完這堂課才知道原來有正規的管道！感謝公會講師清楚講解法規，現在我有證書，跟飼主談案子時底氣足很多。」</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3 font-bold text-gray-500">陳</div>
-                        <div>
-                            <h5 class="font-bold text-sm">陳小姐</h5>
-                            <span class="text-xs text-brand-orange">兼職保母</span>
-                        </div>
-                    </div>
+                <!-- USP 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-brand-blue"></div>
+                    <div class="text-5xl text-gray-200 absolute -bottom-4 -right-4 font-black">01</div>
+                    <i class="fas fa-building-columns text-4xl text-brand-blue mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">臺北市動保處核定認可</h3>
+                    <p class="text-gray-600 text-sm text-left">課程品質有保障，完成全數課程並考核通過，即可取得「特定寵物業專任人員研習時數證書」，總時數達 40小時。</p>
                 </div>
-                <!-- Review 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-md relative">
-                    <div class="text-4xl text-brand-orange/20 absolute top-4 right-4"><i class="fas fa-quote-right"></i></div>
-                    <p class="text-gray-600 mb-6 relative z-10">「本來只是喜歡狗，沒想到還有這麼多學問。課程中的急救術非常實用，甚至讓我救了鄰居噎到的狗狗。這是一份受人尊敬的專業。」</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3 font-bold text-gray-500">林</div>
-                        <div>
-                            <h5 class="font-bold text-sm">林先生</h5>
-                            <span class="text-xs text-brand-orange">退休轉職</span>
-                        </div>
-                    </div>
+                <!-- USP 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-brand-orange"></div>
+                    <div class="text-5xl text-gray-200 absolute -bottom-4 -right-4 font-black">02</div>
+                    <i class="fas fa-link text-4xl text-brand-orange mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">導入 IOTA 區塊鏈證書</h3>
+                    <p class="text-gray-600 text-sm text-left">告別紙本遺失風險！我們使用歐盟認可 IOTA 區塊鏈技術發放電子證書。這是一份無法被竄改、具國際公信力的專業履歷。<br><span class="text-xs text-gray-400">(*若需實體證書需另外申請)</span></p>
                 </div>
-                <!-- Review 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-md relative">
-                    <div class="text-4xl text-brand-orange/20 absolute top-4 right-4"><i class="fas fa-quote-right"></i></div>
-                    <p class="text-gray-600 mb-6 relative z-10">「學校教的是醫療，這裡教的是『生活照護』與『飼主溝通』。講師的實戰經驗非常豐富，SOP教得很細，連進門怎麼消毒都有教，非常推薦！」</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3 font-bold text-gray-500">張</div>
-                        <div>
-                            <h5 class="font-bold text-sm">張同學</h5>
-                            <span class="text-xs text-brand-orange">獸醫系學生</span>
-                        </div>
-                    </div>
+                <!-- USP 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-green-500"></div>
+                    <div class="text-5xl text-gray-200 absolute -bottom-4 -right-4 font-black">03</div>
+                    <i class="fas fa-video text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Zoom 直播 + 錄影回放</h3>
+                    <p class="text-gray-600 text-sm text-left">線上學習互動效率高！使用 Zoom 進行直播授課，並提供 Youtube 線上回放機制，在限定期間內皆可重複觀看複習，學習無死角。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Instructors -->
-    <section class="py-16 bg-white">
+    <!-- Strict Assessment Rules -->
+    <section class="py-16 bg-white border-t border-gray-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-brand-dark mb-12">課程研發團隊暨專業師資群</h2>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-4">
-                    <div class="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-4 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Instructor" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="font-bold text-lg">台北市寵物商業同業公會<br>理事長/資深講師</h4>
-                    <p class="text-sm text-gray-500 mt-2">親自傳授現行法規與產業動態，確保學員知識與時俱進，不踩法律紅線。</p>
+            <div class="max-w-4xl mx-auto border-2 border-brand-dark rounded-xl p-8 relative">
+                <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand-dark text-white px-6 py-2 rounded-full font-bold shadow-lg">
+                    嚴謹考核，確保專業含金量
                 </div>
-                <div class="p-4">
-                    <div class="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-4 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Instructor" class="w-full h-full object-cover">
+                <p class="text-center text-gray-500 mt-4 mb-8">我們嚴格，因為我們重視每一位毛孩的生命</p>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <i class="fas fa-user-check text-3xl text-gray-400 mb-3"></i>
+                        <h4 class="font-bold text-lg mb-2">混合點名制</h4>
+                        <p class="text-sm text-gray-600">課前報到、課程中需開啟鏡頭、助教隨機點名、課後簽退。</p>
                     </div>
-                    <h4 class="font-bold text-lg">Maokiddo 創辦人<br>資深寵物行為師</h4>
-                    <p class="text-sm text-gray-500 mt-2">擁有多年到府保母實戰經驗，累積服務超過千隻毛孩，將最真實的案場經驗無私分享。</p>
+                    <div class="text-center border-l-0 md:border-l border-r-0 md:border-r border-gray-200 px-4">
+                        <i class="fas fa-pen-to-square text-3xl text-gray-400 mb-3"></i>
+                        <h4 class="font-bold text-lg mb-2">線上測驗</h4>
+                        <p class="text-sm text-gray-600">每堂課後 30 分鐘線上測驗（10題單選），成績需達 70分及格（可補考一次）。</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-clock text-3xl text-gray-400 mb-3"></i>
+                        <h4 class="font-bold text-lg mb-2">時數認定</h4>
+                        <p class="text-sm text-gray-600">三次未到、未滿 2/3 時數或未測驗者，<span class="text-red-600 font-bold">不發予時數證明</span>。</p>
+                    </div>
                 </div>
-                <div class="p-4">
-                    <div class="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-4 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Instructor" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="font-bold text-lg">特約獸醫師 / 營養師</h4>
-                    <p class="text-sm text-gray-500 mt-2">針對急救醫療與飲食營養進行專題授課，建立保母最堅實的醫學常識基礎。</p>
+                <div class="mt-8 bg-red-50 p-4 rounded text-center text-red-700 text-sm font-bold">
+                    <i class="fas fa-bullhorn mr-2"></i> 注意：無故曠課不予補課，亦不發予證書。我們要培養的是負責任的專業保母。
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Registration Form -->
-    <section id="register" class="py-16 bg-gradient-to-br from-brand-blue to-blue-900 text-white">
+    <!-- Pricing & Info -->
+    <section class="py-16 bg-gray-900 text-white">
         <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
-                <div class="p-8 md:p-12 text-gray-800">
-                    <h2 class="text-3xl font-bold text-center mb-2 text-brand-blue">加入合法寵物保母行列</h2>
-                    <p class="text-center text-gray-500 mb-8">現在報名，優先解鎖公會合作專屬講義！</p>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Info -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-brand-orange">課程費用與報名資訊</h2>
+                    <h3 class="text-xl font-bold mb-4">Maokiddo 寵物保母專任人員課程</h3>
                     
-                    <form onsubmit="event.preventDefault(); alert('感謝您的填寫！我們會盡快將課程簡章寄送給您。');" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-bold mb-2">姓名*</label>
-                                <input type="text" required class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange" placeholder="請輸入您的真實姓名">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-bold mb-2">聯絡電話*</label>
-                                <input type="tel" required class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange" placeholder="09xx-xxx-xxx">
-                            </div>
+                    <div class="bg-gray-800 p-6 rounded-lg mb-8">
+                        <div class="flex items-end mb-2">
+                            <span class="text-gray-400 text-sm line-through mr-4">原價： NT$ 12,000 /人</span>
                         </div>
-
-                        <div>
-                            <label class="block text-sm font-bold mb-2">所在地區*</label>
-                            <select required class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange bg-white">
-                                <option value="" disabled selected>請選擇您居住的縣市</option>
-                                <option value="taipei">台北市</option>
-                                <option value="new_taipei">新北市</option>
-                                <option value="others">其他縣市</option>
-                            </select>
+                        <div class="flex items-end">
+                            <span class="text-4xl font-bold text-white mr-2">專案優惠價： NT$ 8,800</span>
+                            <span class="text-gray-400 text-sm mb-2">/人</span>
                         </div>
+                    </div>
 
-                        <div>
-                            <label class="block text-sm font-bold mb-2">為什麼想上寵物保母課程？（可複選）</label>
-                            <div class="space-y-2">
-                                <label class="flex items-center space-x-3 cursor-pointer p-3 border rounded hover:bg-gray-50">
-                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-brand-orange">
-                                    <span>想取得合法資格接案 (公會認證)</span>
-                                </label>
-                                <label class="flex items-center space-x-3 cursor-pointer p-3 border rounded hover:bg-gray-50">
-                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-brand-orange">
-                                    <span>想學習照顧自己的寵物</span>
-                                </label>
-                                <label class="flex items-center space-x-3 cursor-pointer p-3 border rounded hover:bg-gray-50">
-                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-brand-orange">
-                                    <span>未來想經營寵物相關事業</span>
-                                </label>
-                                <label class="flex items-center space-x-3 cursor-pointer p-3 border rounded hover:bg-gray-50">
-                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-brand-orange">
-                                    <span>相關行業進修</span>
-                                </label>
-                            </div>
-                        </div>
+                    <div class="space-y-4 text-sm text-gray-300">
+                        <p><strong>主辦單位：</strong> 玩物壯志股份有限公司、大良造興業有限公司</p>
+                        <p><strong>協辦單位：</strong> maokiddo元宇宙事業有限公司</p>
+                    </div>
 
-                        <button type="submit" class="w-full bg-brand-orange text-white font-bold text-lg py-4 rounded-lg hover:bg-amber-600 transition shadow-lg transform active:scale-95">
-                            送出表單，索取課程簡章
+                    <div class="mt-8">
+                        <button onclick="document.getElementById('refund-policy').classList.toggle('hidden')" class="flex items-center text-brand-orange font-bold hover:text-white transition">
+                            <i class="fas fa-info-circle mr-2"></i> 點擊查看：學員權益與退費說明
                         </button>
-                        <p class="text-xs text-center text-gray-400 mt-4">*我們尊重您的隱私，資料僅用於課程聯繫。</p>
+                        <div id="refund-policy" class="hidden mt-4 bg-gray-800 p-4 rounded text-sm text-gray-300">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong class="text-white">如何上課：</strong> 以 email/群組通知 Zoom 連結。登入請用「中文全名」。</li>
+                                <li><strong class="text-white">講義：</strong> 不提供紙本/電子講義，請自備筆記。</li>
+                                <li><strong class="text-white">時數：</strong> 繁殖/買賣/寄養需 200 小時，本課程提供 40 小時。</li>
+                                <li><strong class="text-white">退費規定：</strong>
+                                    <ul class="pl-6 mt-1 space-y-1 text-gray-400 text-xs">
+                                        <li>上課 60 天前：退還 95%</li>
+                                        <li>上課 59~15 天前：退還 80%</li>
+                                        <li>上課 14~10 天前：退還 60%</li>
+                                        <li>10 天內/逾期：不退費，請自行轉讓。</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div id="register" class="bg-white text-gray-800 rounded-xl shadow-2xl p-8">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-brand-dark">加入專業保母行列</h3>
+                    <p class="text-center text-sm text-gray-500 mb-6">請填寫表單並完成匯款，才算報名成功。</p>
+
+                    <form onsubmit="event.preventDefault(); alert('資料已送出！請記得完成匯款以保留名額。');" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-bold mb-1">姓名 (需與身分證一致)*</label>
+                            <input type="text" required class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none" placeholder="王小明">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-1">聯絡電話*</label>
+                            <input type="tel" required class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none" placeholder="09xx-xxx-xxx">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-1">Email (接收上課連結)*</label>
+                            <input type="email" required class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none" placeholder="example@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-1 text-brand-blue">匯款帳號後五碼*</label>
+                            <input type="text" required maxlength="5" class="w-full p-3 border border-brand-blue rounded bg-blue-50 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none" placeholder="12345">
+                            <p class="text-xs text-gray-400 mt-1">請先匯款至簡章指定帳戶後填寫</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-bold mb-2">為什麼想上這堂課？</label>
+                            <div class="space-y-2 text-sm">
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="form-checkbox text-brand-orange h-4 w-4">
+                                    <span>申請特定寵物業專任人員資格</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="form-checkbox text-brand-orange h-4 w-4">
+                                    <span>精進保母專業技能</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="form-checkbox text-brand-orange h-4 w-4">
+                                    <span>個人飼養需求學習</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit" class="w-full bg-brand-orange text-white font-bold text-lg py-4 rounded-lg hover:bg-amber-600 transition shadow-lg transform active:scale-95">
+                                送出表單並前往匯款
+                            </button>
+                            <p class="text-xs text-center text-gray-400 mt-3">點擊即代表您已詳閱並同意退費標準</p>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -477,18 +387,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-dark text-white py-8 border-t border-gray-700">
+    <footer class="bg-black text-white py-8 border-t border-gray-800">
         <div class="container mx-auto px-4 text-center">
-            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-6 text-sm text-gray-300">
+            <div class="flex flex-wrap justify-center gap-6 mb-6 text-sm text-gray-400">
                 <a href="#" class="hover:text-white transition">關於我們</a>
-                <span class="hidden md:inline">|</span>
                 <a href="#" class="hover:text-white transition">課程列表</a>
-                <span class="hidden md:inline">|</span>
-                <a href="#" class="hover:text-white transition">師資介紹</a>
-                <span class="hidden md:inline">|</span>
-                <a href="#" class="hover:text-white transition">常見問答</a>
+                <a href="#" class="hover:text-white transition">聯絡我們</a>
             </div>
-            <p class="text-sm text-gray-500">Copyright © maokiddo x 台北市寵物商業同業公會 合作課程</p>
+            <p class="text-xs text-gray-600">Copyright © Maokiddo x 玩物壯志 x 大良造興業</p>
         </div>
     </footer>
 
